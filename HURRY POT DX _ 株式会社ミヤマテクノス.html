@@ -1,0 +1,1791 @@
+<!DOCTYPE html>
+<!-- saved from url=(0164)file:///Users/kojimamisuzu/Documents/HURRY%20POT%20DX%20_%20%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E3%83%9F%E3%83%A4%E3%83%9E%E3%83%86%E3%82%AF%E3%83%8E%E3%82%B9.html -->
+<html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HURRY POT DX | 株式会社ミヤマテクノス</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./HURRY POT DX _ 株式会社ミヤマテクノス_files/css2" rel="stylesheet">
+<style>
+  :root {
+    --green-deep: #2d5a3d;
+    --green-mid: #4a7c59;
+    --green-soft: #7aab8a;
+    --green-pale: #c8dfcf;
+    --green-mist: #e8f2eb;
+    --cream: #f7f4ef;
+    --warm-white: #fdfcfa;
+    --charcoal: #2c2c2c;
+    --gray-mid: #6b7280;
+    --gray-light: #d1d5db;
+    --sky-blue: #a8c8d8;
+    --sky-pale: #dceef5;
+    --accent-gold: #b89860;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--warm-white);
+    color: var(--charcoal);
+    line-height: 1.8;
+    font-weight: 300;
+    max-width: 1440px;
+    margin: 0 auto;
+    overflow-x: hidden;
+  }
+
+  /* ====== NAV ====== */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1440px;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 48px;
+    height: 68px;
+    background: rgba(253, 252, 250, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(45, 90, 61, 0.1);
+  }
+
+  .nav-logo {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 15px;
+    color: var(--green-deep);
+    letter-spacing: 0.22em;
+    font-weight: 400;
+    line-height: 1.3;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    font-size: 13px;
+    color: var(--green-mid);
+    letter-spacing: 0.08em;
+    font-weight: 400;
+    position: relative;
+    transition: color 0.3s;
+  }
+
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -3px; left: 0; right: 0;
+    height: 1px;
+    background: var(--green-mid);
+    transform: scaleX(0);
+    transition: transform 0.3s;
+  }
+
+  .nav-links a:hover { color: var(--charcoal); }
+  .nav-links a:hover::after { transform: scaleX(1); }
+
+  /* ====== HERO / MAIN VISUAL ====== */
+  .main-visual {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .main-visual::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 60px;
+    background: linear-gradient(to bottom, transparent 0%, var(--cream) 100%);
+    pointer-events: none;
+    z-index: 5;
+  }
+
+  .sky-bg {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      175deg,
+      #c9e4f0 0%,
+      #daeef7 20%,
+      #eaf5f9 40%,
+      #f0f7ef 65%,
+      #e8f2eb 80%,
+      #d4e8d8 100%
+    );
+  }
+
+  /* Subtle cloud shapes */
+  .cloud {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.55);
+    filter: blur(28px);
+  }
+  .cloud-1 { width: 480px; height: 120px; top: 18%; left: 8%; }
+  .cloud-2 { width: 320px; height: 80px; top: 28%; left: 38%; }
+  .cloud-3 { width: 560px; height: 100px; top: 12%; right: -40px; }
+  .cloud-4 { width: 220px; height: 60px; top: 42%; left: 20%; }
+
+  /* Sun glow */
+  .sun-glow {
+    position: absolute;
+    top: 10%; right: 18%;
+    width: 200px; height: 200px;
+    background: radial-gradient(circle, rgba(255,245,210,0.7) 0%, rgba(255,220,120,0.2) 50%, transparent 75%);
+    border-radius: 50%;
+    animation: sunPulse 6s ease-in-out infinite;
+  }
+
+  @keyframes sunPulse {
+    0%, 100% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.08); opacity: 1; }
+  }
+
+  /* Ground / horizon */
+  .horizon {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 45%;
+    background: linear-gradient(to top, #d4e8d8 0%, #e8f2eb 50%, transparent 100%);
+  }
+
+  /* Trees silhouette */
+  .trees {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 260px;
+    overflow: hidden;
+  }
+
+  .tree {
+    position: absolute;
+    bottom: 0;
+  }
+
+  .tree svg { display: block; }
+
+  .hero-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 0 24px;
+    animation: fadeUp 1.2s ease both;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-eyebrow {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(14px, 1.8vw, 20px);
+    letter-spacing: 0.28em;
+    color: var(--green-mid);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    font-weight: 400;
+  }
+
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(72px, 13vw, 148px);
+    font-weight: 300;
+    color: var(--green-deep);
+    letter-spacing: 0.08em;
+    line-height: 0.95;
+    margin-bottom: 12px;
+  }
+
+  .hero-subtitle {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: clamp(13px, 1.4vw, 18px);
+    color: var(--green-deep);
+    letter-spacing: 0.22em;
+    font-weight: 300;
+    margin-bottom: 48px;
+    opacity: 0.85;
+  }
+
+  .hero-tagline {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(16px, 2vw, 24px);
+    color: var(--green-deep);
+    letter-spacing: 0.18em;
+    line-height: 2.2;
+    max-width: 600px;
+    margin: 0 auto 80px;
+    font-weight: 400;
+    text-shadow: 0 1px 12px rgba(255,255,255,0.8);
+  }
+
+  .hero-cta {
+    display: inline-block;
+    padding: 14px 40px;
+    border: 1.5px solid var(--green-mid);
+    color: var(--green-mid);
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 0.18em;
+    transition: all 0.35s;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.6);
+  }
+
+  .hero-cta:hover {
+    background: var(--green-mid);
+    color: white;
+  }
+
+  .scroll-indicator {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: var(--green-soft);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    animation: bobDown 2s ease-in-out infinite;
+  }
+
+  .scroll-indicator::after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, var(--green-soft), transparent);
+  }
+
+  @keyframes bobDown {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(6px); }
+  }
+
+  /* ====== SECTION BASE ====== */
+  section { padding: 100px 0; }
+
+  .container {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 48px;
+  }
+
+  .section-label {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--green-mid);
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .section-title {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: clamp(26px, 3.5vw, 38px);
+    font-weight: 400;
+    color: var(--green-deep);
+    line-height: 1.5;
+    margin-bottom: 24px;
+  }
+
+  .divider {
+    width: 48px;
+    height: 1.5px;
+    background: var(--green-soft);
+    margin-bottom: 32px;
+  }
+
+  /* ====== PRODUCT INFO ====== */
+  .product-section {
+    background: var(--cream);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .product-bg-text {
+    position: absolute;
+    top: 36px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1080px;
+    padding: 0 48px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(32px, 4.5vw, 60px);
+    font-weight: 600;
+    color: rgba(45, 90, 61, 0.07);
+    letter-spacing: 0.04em;
+    line-height: 1.0;
+    pointer-events: none;
+    z-index: 0;
+    user-select: none;
+  }
+
+  .product-section .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  .product-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .product-image-placeholder {
+    aspect-ratio: 4/3;
+    background: linear-gradient(135deg, var(--green-mist) 0%, var(--sky-pale) 100%);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--green-pale);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .product-image-placeholder::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 24px,
+      rgba(122,171,138,0.06) 24px,
+      rgba(122,171,138,0.06) 25px
+    );
+  }
+
+  .product-icon-large {
+    font-size: 72px;
+    opacity: 0.4;
+    margin-bottom: 12px;
+  }
+
+  .product-img-label {
+    font-size: 12px;
+    color: var(--green-soft);
+    letter-spacing: 0.15em;
+    font-family: 'Noto Sans JP', sans-serif;
+  }
+
+  .product-catch {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 22px;
+    color: var(--green-deep);
+    line-height: 1.9;
+    margin-bottom: 24px;
+    font-weight: 400;
+  }
+
+  .product-name-display {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(52px, 6vw, 80px);
+    font-weight: 300;
+    color: var(--green-deep);
+    letter-spacing: 0.08em;
+    margin-bottom: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    line-height: 1.0;
+  }
+
+  .product-name-label {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.35em;
+    color: var(--green-soft);
+    font-weight: 400;
+    margin-bottom: 4px;
+    display: block;
+  }
+
+  .product-name-line {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, var(--green-pale), transparent);
+  }
+
+  .product-desc {
+    font-size: 14.5px;
+    color: #4a5568;
+    line-height: 2.1;
+    border-left: 2px solid var(--green-pale);
+    padding-left: 24px;
+  }
+
+  /* ====== MERIT SECTION ====== */
+  .merit-section {
+    background: var(--warm-white);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .merit-bg-text {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(32px, 4.5vw, 60px);
+    font-weight: 600;
+    color: rgba(45, 90, 61, 0.06);
+    letter-spacing: 0.06em;
+    line-height: 1.0;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 1;
+    user-select: none;
+  }
+
+  .merit-section .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  .merit-header {
+    text-align: center;
+    margin-bottom: 80px;
+    position: relative;
+    z-index: 2;
+    padding-top: clamp(80px, 10vw, 140px);
+  }
+
+  .merit-title-wrap {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .merit-title-line {
+    width: 200px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--green-soft), transparent);
+    display: block;
+  }
+
+  .merit-header .divider {
+    margin: 0 auto 32px;
+  }
+
+  .merit-blocks {
+    display: flex;
+    flex-direction: column;
+    max-width: 1080px;
+    margin: 0 auto;
+    width: 100%;
+    gap: 24px;
+  }
+
+  .merit-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 72px 0;
+    align-items: center;
+    gap: 64px;
+    opacity: 0;
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+
+  /* Economy・Reliability：見出し左、説明右 */
+  .merit-block.slide-from-left {
+    transform: translateX(-48px);
+  }
+  /* Ecology：見出し右、説明左 */
+  .merit-block.slide-from-right {
+    transform: translateX(48px);
+  }
+  .merit-block.slide-from-right .merit-block-left {
+    order: 2;
+  }
+  .merit-block.slide-from-right .merit-block-right {
+    order: 1;
+    border-left: none;
+    border-right: 1.5px solid var(--green-pale);
+    padding-left: 0;
+    padding-right: 64px;
+  }
+
+  .merit-block.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .merit-block-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .merit-title-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .merit-illustration {
+    width: 72px;
+    height: 72px;
+    flex-shrink: 0;
+  }
+
+  .merit-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 56px;
+    font-weight: 300;
+    color: var(--green-deep);
+    letter-spacing: 0.03em;
+    line-height: 1.0;
+    margin-bottom: 8px;
+  }
+
+  .merit-ja {
+    font-size: 13px;
+    color: var(--green-soft);
+    letter-spacing: 0.24em;
+    display: block;
+  }
+
+  .merit-block-right {
+    padding-left: 48px;
+    border-left: 1.5px solid var(--green-pale);
+  }
+
+
+  .merit-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .merit-list li {
+    font-size: 14.5px;
+    color: #4a5568;
+    line-height: 1.9;
+    padding-left: 0;
+    position: relative;
+  }
+
+  /* ====== NUMBERS SECTION ====== */
+  .numbers-section {
+    background:
+      radial-gradient(ellipse 70% 55% at 10% 20%, rgba(168,200,216,0.35) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 60% at 90% 80%, rgba(200,223,207,0.45) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 40% at 55% 50%, rgba(232,242,235,0.3) 0%, transparent 65%),
+      linear-gradient(150deg, var(--warm-white) 0%, #f2f8f4 50%, #e8f0f5 100%);
+    color: var(--charcoal);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .numbers-bg-text {
+    display: block;
+    text-align: left;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(32px, 4vw, 64px);
+    font-weight: 600;
+    color: rgba(45, 90, 61, 0.06);
+    letter-spacing: 0.06em;
+    line-height: 1.2;
+    white-space: nowrap;
+    pointer-events: none;
+    user-select: none;
+    margin-top: 16px;
+    overflow: visible;
+    padding-bottom: 8px;
+  }
+
+  .numbers-section .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  .numbers-title-wrap {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 12px;
+  }
+
+  .numbers-title-line {
+    width: 200px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--green-soft), transparent);
+    display: block;
+  }
+
+  .numbers-header {
+    text-align: center;
+    margin-bottom: 72px;
+  }
+
+  .numbers-header .section-label { color: var(--green-mid); }
+  .numbers-header .section-title { color: var(--green-deep); }
+  .numbers-header .divider { background: var(--green-soft); margin: 0 auto 24px; }
+
+  .numbers-header p {
+    color: var(--gray-mid);
+    font-size: 14px;
+    letter-spacing: 0.08em;
+  }
+
+  .numbers-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: rgba(45,90,61,0.08);
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+
+  .number-item {
+    background: rgba(255,255,255,0.75);
+    padding: 52px 44px;
+    position: relative;
+    transition: background 0.3s;
+  }
+
+  .number-item:hover {
+    background: rgba(255,255,255,0.92);
+  }
+
+  .number-index {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    color: var(--green-soft);
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  .number-figure {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 68px;
+    font-weight: 300;
+    color: var(--green-deep);
+    line-height: 1;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+  }
+
+  .number-figure sup {
+    font-size: 22px;
+    vertical-align: super;
+    margin-bottom: 10px;
+    color: var(--green-soft);
+  }
+
+  .number-figure span.unit {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 18px;
+    color: var(--green-mid);
+    margin-bottom: 10px;
+    font-weight: 300;
+  }
+
+  .number-title {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 16px;
+    color: var(--green-deep);
+    margin-bottom: 16px;
+    font-weight: 400;
+  }
+
+  .number-desc {
+    font-size: 13px;
+    color: var(--gray-mid);
+    line-height: 1.9;
+  }
+
+  .number-accent {
+    position: absolute;
+    top: 12px; right: 16px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 120px;
+    color: rgba(45,90,61,0.04);
+    line-height: 1;
+    font-weight: 300;
+    pointer-events: none;
+  }
+
+  /* ====== MAINTENANCE ====== */
+  .maintenance-section {
+    background: var(--green-mist);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .maintenance-bg-text {
+    position: absolute;
+    top: 80px;
+    right: 48px;
+    text-align: right;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(32px, 4.5vw, 64px);
+    font-weight: 600;
+    color: rgba(45, 90, 61, 0.06);
+    letter-spacing: 0.06em;
+    line-height: 1.2;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 0;
+    user-select: none;
+  }
+
+  .maintenance-section .maintenance-inner {
+    position: relative;
+    z-index: 1;
+  }
+
+  .maintenance-points-row {
+    display: grid;
+    grid-template-columns: 1fr 260px;
+    gap: 32px;
+    align-items: start;
+  }
+
+  .maintenance-photo-box {
+    aspect-ratio: 3/4;
+    background: linear-gradient(135deg, var(--green-pale) 0%, var(--sky-pale) 100%);
+    border-radius: 6px;
+    border: 1px solid var(--green-pale);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .maintenance-photo-icon { font-size: 36px; opacity: 0.35; }
+
+  .maintenance-photo-label {
+    font-size: 11px;
+    color: var(--green-soft);
+    letter-spacing: 0.14em;
+  }
+
+  .maintenance-title-wrap {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 24px;
+  }
+
+  .maintenance-title-line {
+    width: 200px;
+    height: 1px;
+    background: linear-gradient(to right, var(--green-soft), transparent);
+    display: block;
+  }
+
+  .maintenance-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+  }
+
+  .maintenance-text p {
+    font-size: 14.5px;
+    color: #4a5568;
+    line-height: 2.2;
+    margin-bottom: 32px;
+  }
+
+  .maintenance-points {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .maintenance-point {
+    display: flex;
+    align-items: flex-start;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--green-pale);
+  }
+  .maintenance-point:first-child {
+    border-top: 1px solid var(--green-pale);
+  }
+
+  .maintenance-point-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--green-mid);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .maintenance-point-icon svg {
+    width: 18px;
+    height: 18px;
+    fill: none;
+    stroke: white;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+  }
+
+  .point-highlight {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--green-deep);
+  }
+
+  .maintenance-point p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--charcoal);
+    line-height: 1.8;
+  }
+
+  .maintenance-flow {
+    background: white;
+    border-radius: 8px;
+    padding: 48px 40px;
+    border: 1px solid var(--green-pale);
+  }
+
+  .flow-steps {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    gap: 0;
+    overflow-x: auto;
+    padding-top: 12px;
+    overflow-y: visible;
+  }
+
+  .flow-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+    position: relative;
+  }
+
+  .flow-step-circle {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+    margin-top: 16px;
+    position: relative;
+    z-index: 1;
+    border: none;
+    background: radial-gradient(circle, rgba(200,223,207,0.6) 0%, rgba(200,223,207,0) 75%);
+    box-shadow: 0 0 28px 8px rgba(122,171,138,0.18);
+    flex-shrink: 0;
+    overflow: visible;
+  }
+
+  .flow-step-emoji {
+    font-size: 32px;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .flow-step-circle-label {
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: var(--green-deep);
+    font-weight: 500;
+  }
+
+  .flow-arrow {
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+    color: var(--green-soft);
+    flex-shrink: 0;
+  }
+
+  .flow-arrow svg {
+    width: 28px;
+    height: 16px;
+  }
+
+  .flow-step-body {
+    padding: 0 4px;
+  }
+
+  .flow-step-label {
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    color: var(--green-soft);
+    margin-bottom: 4px;
+  }
+
+  .flow-step-name {
+    font-size: 13px;
+    color: var(--green-deep);
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+
+  .flow-step-desc {
+    font-size: 12px;
+    color: var(--gray-mid);
+    line-height: 1.65;
+  }
+
+  .flow-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(22px, 3vw, 32px);
+    color: var(--green-deep);
+    margin-bottom: 36px;
+    letter-spacing: 0.12em;
+    font-weight: 400;
+  }
+
+  /* ====== VOICES ====== */
+  .voices-section {
+    background: var(--warm-white);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .voices-header {
+    text-align: center;
+    margin-bottom: 64px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .voices-title-wrap {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 0;
+  }
+
+  .voices-title-line {
+    width: 200px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--green-soft), transparent);
+    display: block;
+  }
+
+  .voices-bg-text {
+    display: block;
+    text-align: left;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(32px, 4vw, 64px);
+    font-weight: 600;
+    color: rgba(45, 90, 61, 0.06);
+    letter-spacing: 0.06em;
+    line-height: 1.2;
+    white-space: nowrap;
+    pointer-events: none;
+    user-select: none;
+    margin-top: 16px;
+    overflow: visible;
+    padding-bottom: 8px;
+  }
+
+  .voices-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+
+  .voice-card {
+    background: var(--cream);
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid var(--green-pale);
+    position: relative;
+    transition: box-shadow 0.3s;
+  }
+  .voice-card-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    background: linear-gradient(135deg, var(--green-pale) 0%, var(--sky-pale) 100%);
+  }
+  .voice-card-image-placeholder {
+    width: 100%;
+    height: 180px;
+    background: linear-gradient(135deg, var(--green-mist) 0%, var(--sky-pale) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+    color: var(--green-soft);
+    font-size: 12px;
+    letter-spacing: 0.12em;
+  }
+  .voice-card-image-placeholder span { font-size: 32px; opacity: 0.5; }
+  .voice-card-body {
+    padding: 32px 28px 36px;
+  }
+
+  .voice-card:hover {
+    box-shadow: 0 8px 32px rgba(45, 90, 61, 0.07);
+  }
+
+  .voice-quote-mark {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 80px;
+    color: var(--green-pale);
+    line-height: 0.8;
+    margin-bottom: 20px;
+    display: block;
+    font-weight: 300;
+  }
+
+  .voice-text {
+    font-size: 14px;
+    color: #4a5568;
+    line-height: 2.0;
+    margin-bottom: 28px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 300;
+  }
+
+  .voice-divider {
+    width: 32px;
+    height: 1px;
+    background: var(--green-pale);
+    margin-bottom: 20px;
+  }
+
+  .voice-author {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .voice-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--green-pale), var(--sky-pale));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+
+  .voice-info {}
+
+  .voice-role {
+    font-size: 11px;
+    color: var(--green-soft);
+    letter-spacing: 0.12em;
+    margin-bottom: 3px;
+  }
+
+  .voice-name {
+    font-size: 13px;
+    color: var(--green-deep);
+    font-weight: 500;
+  }
+
+  /* ====== CTA SECTION ====== */
+  .cta-section {
+    background: var(--green-mist);
+    padding: 120px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-section::before {
+    content: 'CONTACT US';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 160px;
+    font-weight: 600;
+    color: rgba(45,90,61,0.04);
+    white-space: nowrap;
+    pointer-events: none;
+    letter-spacing: 0.08em;
+  }
+
+  .cta-section .section-label { color: var(--green-mid); }
+
+  .cta-section .section-title {
+    color: var(--green-deep);
+    margin-bottom: 16px;
+  }
+
+  .cta-section p {
+    color: var(--gray-mid);
+    font-size: 14px;
+    letter-spacing: 0.08em;
+    margin-bottom: 48px;
+  }
+
+  .cta-btn {
+    display: inline-block;
+    padding: 14px 40px;
+    border: 1.5px solid var(--green-mid);
+    color: var(--green-mid);
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 0.18em;
+    transition: all 0.35s;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.6);
+  }
+
+  .cta-btn:hover {
+    background: var(--green-mid);
+    color: white;
+  }
+
+  /* ====== FOOTER ====== */
+  footer {
+    background: var(--charcoal);
+    color: rgba(255,255,255,0.5);
+    padding: 48px 0;
+    text-align: center;
+  }
+
+  footer .footer-logo {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 14px;
+    color: rgba(255,255,255,0.8);
+    letter-spacing: 0.15em;
+    margin-bottom: 16px;
+  }
+
+  footer p {
+    font-size: 12px;
+    letter-spacing: 0.06em;
+  }
+
+
+  /* ====== WAVE DIVIDERS ====== */
+  .wave-divider {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    margin: 0;
+  }
+  .wave-divider svg {
+    display: block;
+    width: 100%;
+  }
+  /* ====== ANIMATIONS ====== */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .fade-in-delay-1 { transition-delay: 0.1s; }
+  .fade-in-delay-2 { transition-delay: 0.2s; }
+  .fade-in-delay-3 { transition-delay: 0.3s; }
+
+  /* メリットセクション用 左右スライドイン */
+  .slide-from-left {
+    opacity: 0;
+    transform: translateX(-60px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+  }
+
+  .slide-from-right {
+    opacity: 0;
+    transform: translateX(60px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+  }
+
+  .slide-from-left.visible,
+  .slide-from-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  @media (max-width: 768px) {
+    nav { padding: 0 24px; }
+    .nav-links { gap: 20px; }
+    .container { padding: 0 24px; }
+    .product-inner, .maintenance-inner { grid-template-columns: 1fr; gap: 48px; }
+    .voices-grid { grid-template-columns: 1fr; }
+    .numbers-grid { grid-template-columns: 1fr; }
+    .merit-block { grid-template-columns: 1fr; gap: 28px; }
+    .merit-block-left::after { display: none; }
+    .merit-block-left { padding-right: 0; }
+    .merit-block-right { padding-left: 0; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <div class="nav-logo">株式会社 ミヤマテクノス</div>
+  <ul class="nav-links">
+    <li><a href="file:///Users/kojimamisuzu/Downloads/product.html">製品情報</a></li>
+    <li><a href="file:///Users/kojimamisuzu/Downloads/hurry-pot-dx%20(4).html#about">会社案内</a></li>
+    <li><a href="file:///Users/kojimamisuzu/Downloads/hurry-pot-dx%20(4).html#initiative">取り組み</a></li>
+    <li><a href="file:///Users/kojimamisuzu/Downloads/hurry-pot-dx%20(4).html#contact">お問合せ</a></li>
+  </ul>
+</nav>
+
+<!-- MAIN VISUAL -->
+<div class="main-visual">
+  <div class="sky-bg"></div>
+  <div class="sun-glow"></div>
+  <div class="cloud cloud-1"></div>
+  <div class="cloud cloud-2"></div>
+  <div class="cloud cloud-3"></div>
+  <div class="cloud cloud-4"></div>
+  <div class="horizon"></div>
+
+  <!-- Tree silhouettes using SVG -->
+  <div class="trees">
+    <div class="tree" style="left:2%; bottom:0">
+      <svg width="60" height="140" viewBox="0 0 60 140"><polygon points="30,0 55,100 5,100" fill="rgba(45,90,61,0.18)"></polygon><rect x="25" y="98" width="10" height="42" fill="rgba(45,90,61,0.15)"></rect></svg>
+    </div>
+    <div class="tree" style="left:6%; bottom:0">
+      <svg width="48" height="110" viewBox="0 0 48 110"><polygon points="24,0 44,78 4,78" fill="rgba(45,90,61,0.22)"></polygon><rect x="20" y="76" width="8" height="34" fill="rgba(45,90,61,0.18)"></rect></svg>
+    </div>
+    <div class="tree" style="left:11%; bottom:0">
+      <svg width="70" height="160" viewBox="0 0 70 160"><polygon points="35,0 65,115 5,115" fill="rgba(45,90,61,0.15)"></polygon><rect x="29" y="113" width="12" height="47" fill="rgba(45,90,61,0.12)"></rect></svg>
+    </div>
+    <div class="tree" style="right:3%; bottom:0">
+      <svg width="65" height="150" viewBox="0 0 65 150"><polygon points="32,0 60,108 4,108" fill="rgba(45,90,61,0.20)"></polygon><rect x="27" y="106" width="11" height="44" fill="rgba(45,90,61,0.17)"></rect></svg>
+    </div>
+    <div class="tree" style="right:9%; bottom:0">
+      <svg width="50" height="115" viewBox="0 0 50 115"><polygon points="25,0 46,83 4,83" fill="rgba(45,90,61,0.24)"></polygon><rect x="21" y="81" width="8" height="34" fill="rgba(45,90,61,0.20)"></rect></svg>
+    </div>
+    <div class="tree" style="right:15%; bottom:0">
+      <svg width="55" height="130" viewBox="0 0 55 130"><polygon points="28,0 52,94 4,94" fill="rgba(45,90,61,0.16)"></polygon><rect x="23" y="92" width="9" height="38" fill="rgba(45,90,61,0.13)"></rect></svg>
+    </div>
+    <div class="tree" style="left:45%; bottom:0">
+      <svg width="40" height="90" viewBox="0 0 40 90"><polygon points="20,0 38,65 2,65" fill="rgba(45,90,61,0.12)"></polygon><rect x="16" y="63" width="7" height="27" fill="rgba(45,90,61,0.10)"></rect></svg>
+    </div>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow">Environment Conscious Incinerator</div>
+    <div class="hero-title">HURRY<br>POT DX</div>
+    <div class="hero-subtitle">ハリーポット デラックス</div>
+    <p class="hero-tagline">命を預かる現場のために。<br>環境にやさしく、確かな安心を。</p>
+    <a href="file:///Users/kojimamisuzu/Downloads/hurry-pot-dx%20(4).html#product" class="hero-cta">製品詳細を見る</a>
+  </div>
+
+  <div class="scroll-indicator">SCROLL</div>
+</div>
+
+<!-- PRODUCT INFO SECTION -->
+<section class="product-section" id="product">
+  <div class="product-bg-text">Product<br>Information</div>
+  <div class="container">
+    <div class="product-inner">
+      <div class="product-image-placeholder fade-in">
+        <div class="product-icon-large">🔥</div>
+        <div class="product-img-label">HURRY POT DX</div>
+      </div>
+      <div class="fade-in fade-in-delay-1">
+        <div class="product-name-display">
+          <span class="product-name-label">製品名</span>
+          <span class="product-name-line"></span>
+          HURRY POT DX
+          <span class="product-name-line"></span>
+        </div>
+        <p class="product-catch">
+          使用済み紙おむつの処理に、<br>
+          新しい選択肢を。
+        </p>
+        <p class="product-desc">
+          HURRY POT DXは、介護施設・医療現場から生まれる使用済み紙おむつを、環境負荷を最小限に抑えながら安全に処理するための小型焼却システムです。<br><br>
+          独自の熱分解技術により、廃棄物量を約1/100に減容。運搬回数の削減とCO₂排出の抑制を同時に実現し、現場の負担を減らしながら法令基準を満たした安全な運用をサポートします。<br><br>
+          小型車1台分のスペースで設置可能なコンパクト設計で、さまざまな施設環境に対応します。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="wave-divider" style="background:var(--cream)">
+  <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,50 C480,0 960,80 1440,20 L1440,80 L0,80 Z" fill="var(--warm-white)"></path>
+  </svg>
+</div>
+<!-- MERIT SECTION -->
+<section class="merit-section" id="merit">
+  <div class="merit-bg-text">Features &amp; Benefits</div>
+  <div class="container">
+    <div class="merit-header fade-in">
+      <div class="merit-title-wrap">
+        <span class="merit-title-line"></span>
+        <h2 class="section-title">導入メリット</h2>
+        <span class="merit-title-line"></span>
+      </div>
+    </div>
+    <div class="merit-blocks">
+
+      <!-- Economy -->
+      <div class="merit-block slide-from-left">
+        <div class="merit-block-left">
+          <svg class="merit-illustration" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- 支柱 -->
+            <line x1="36" y1="22" x2="36" y2="52" stroke="#a8c8b4" stroke-width="1.8" stroke-linecap="round"></line>
+            <!-- 横棒 -->
+            <line x1="22" y1="28" x2="50" y2="28" stroke="#a8c8b4" stroke-width="1.8" stroke-linecap="round"></line>
+            <!-- 左皿の紐 -->
+            <line x1="24" y1="28" x2="20" y2="38" stroke="#a8c8b4" stroke-width="1.4" stroke-linecap="round"></line>
+            <line x1="24" y1="28" x2="28" y2="38" stroke="#a8c8b4" stroke-width="1.4" stroke-linecap="round"></line>
+            <!-- 右皿の紐（少し下がる） -->
+            <line x1="48" y1="28" x2="44" y2="41" stroke="#a8c8b4" stroke-width="1.4" stroke-linecap="round"></line>
+            <line x1="48" y1="28" x2="52" y2="41" stroke="#a8c8b4" stroke-width="1.4" stroke-linecap="round"></line>
+            <!-- 左皿 -->
+            <path d="M18,38 Q24,42 30,38" stroke="#a8c8b4" stroke-width="1.8" stroke-linecap="round" fill="none"></path>
+            <!-- 右皿（やや下） -->
+            <path d="M42,41 Q48,45 54,41" stroke="#a8c8b4" stroke-width="1.8" stroke-linecap="round" fill="none"></path>
+            <!-- 台座 -->
+            <line x1="30" y1="52" x2="42" y2="52" stroke="#a8c8b4" stroke-width="1.8" stroke-linecap="round"></line>
+            <!-- 支柱の頂点の丸 -->
+            <circle cx="36" cy="22" r="2" fill="#a8c8b4"></circle>
+          </svg>
+          <div class="merit-title-group">
+            <div class="merit-en">Economy</div>
+            <span class="merit-ja">経済性</span>
+          </div>
+        </div>
+        <div class="merit-block-right">
+          <ul class="merit-list">
+            <li>紙おむつをそのまま投入するだけで約1/100に減容</li>
+            <li>焼却・運搬回数の削減により処理コストを低減</li>
+            <li>小型車1台分のスペースで導入可能な設計</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Ecology -->
+      <div class="merit-block slide-from-right">
+        <div class="merit-block-left">
+          <svg class="merit-illustration" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- 茎 -->
+            <line x1="36" y1="64" x2="36" y2="36" stroke="#a8c8b4" stroke-width="2.5" stroke-linecap="round"></line>
+            <!-- 根元の小葉（左） -->
+            <path d="M36,52 Q24,48 22,38 Q32,40 36,52Z" fill="#b8d8c4"></path>
+            <!-- 根元の小葉（右） -->
+            <path d="M36,52 Q48,48 50,38 Q40,40 36,52Z" fill="#a8c8b4"></path>
+            <!-- メインの葉（左） -->
+            <path d="M36,40 Q18,32 16,18 Q28,24 36,40Z" fill="#b8d8c4"></path>
+            <!-- メインの葉（右） -->
+            <path d="M36,40 Q54,32 56,18 Q44,24 36,40Z" fill="#a8c8b4"></path>
+            <!-- 新芽（上） -->
+            <path d="M36,22 Q30,12 36,8 Q42,12 36,22Z" fill="#c8dfd0"></path>
+          </svg>
+          <div class="merit-title-group">
+            <div class="merit-en">Ecology</div>
+            <span class="merit-ja">環境価値</span>
+          </div>
+        </div>
+        <div class="merit-block-right">
+          <ul class="merit-list">
+            <li>紙おむつをそのまま投入するだけで約1/100に減容</li>
+            <li>焼却・運搬回数の削減により処理コストを低減</li>
+            <li>小型車1台分のスペースで導入可能な設計</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Reliability -->
+      <div class="merit-block slide-from-left">
+        <div class="merit-block-left">
+          <svg class="merit-illustration" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- 盾の外形 -->
+            <path d="M36,10 L58,20 L58,38 C58,52 46,62 36,66 C26,62 14,52 14,38 L14,20 Z" fill="#edf5f0" stroke="#a8c8b4" stroke-width="2" stroke-linejoin="round"></path>
+            <!-- 盾の内側ライン -->
+            <path d="M36,16 L52,24 L52,38 C52,49 44,57 36,60 C28,57 20,49 20,38 L20,24 Z" fill="none" stroke="#b8d8c4" stroke-width="1" stroke-linejoin="round"></path>
+            <!-- チェックマーク -->
+            <path d="M26,38 L32,44 L46,30" stroke="#a8c8b4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+          </svg>
+          <div class="merit-title-group">
+            <div class="merit-en">Reliability</div>
+            <span class="merit-ja">法令対応と安心</span>
+          </div>
+        </div>
+        <div class="merit-block-right">
+          <ul class="merit-list">
+            <li>紙おむつをそのまま投入するだけで約1/100に減容</li>
+            <li>焼却・運搬回数の削減により処理コストを低減</li>
+            <li>小型車1台分のスペースで導入可能な設計</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- NUMBERS SECTION -->
+<section class="numbers-section" id="numbers">
+  <div class="container">
+    <div class="numbers-header fade-in">
+      <div class="numbers-title-wrap">
+        <span class="numbers-title-line"></span>
+        <h2 class="section-title">数字で見る<br>EcoEco熱分解 1/100 のポテンシャル</h2>
+        <span class="numbers-title-line"></span>
+      </div>
+      <p>処理効率・環境負荷・コストへの定量的な効果</p>
+    </div>
+    <div class="numbers-grid">
+
+      <div class="number-item fade-in">
+        <div class="number-figure">1/100<span class="unit">に減容</span></div>
+        <div class="number-title">紙おむつの体積を劇的に削減</div>
+        <p class="number-desc">紙おむつをそのまま投入しても、処理後は灰として約1/100の体積に。保管スペースと最終処分量を大幅に削減。</p>
+        <div class="number-accent">01</div>
+      </div>
+
+      <div class="number-item fade-in fade-in-delay-1">
+        <div class="number-figure">99<sup>%</sup><span class="unit">削減</span></div>
+        <div class="number-title">運搬回数を条件付きで約99%削減</div>
+        <p class="number-desc">本装置1台で全量処理し、灰のみを年1回程度回収する運用とした場合、従来の週2〜3回の回収と比較して運搬回数を約99%削減可能。</p>
+        <div class="number-accent">02</div>
+      </div>
+
+      <div class="number-item fade-in fade-in-delay-2">
+        <div class="number-figure">CO₂<span class="unit">削減</span></div>
+        <div class="number-title">運搬に伴うCO₂排出を大幅に削減</div>
+        <p class="number-desc">処理後の灰のみを回収することで、廃棄物収集運搬に伴うディーゼル車両由来のCO₂排出を抑制。</p>
+        <div class="number-accent">03</div>
+      </div>
+
+      <div class="number-item fade-in fade-in-delay-3">
+        <div class="number-figure">費用<span class="unit">平準化</span></div>
+        <div class="number-title">焼却炉の負荷軽減と更新費用の平準化</div>
+        <p class="number-desc">焼却炉で処理すべき紙おむつ量を減らすことで施設の負荷を軽減し、更新・補修コストの抑制につながります。</p>
+        <div class="number-accent">04</div>
+      </div>
+
+    </div>
+    <div class="numbers-bg-text">Infographics</div>
+  </div>
+</section>
+<!-- MAINTENANCE SECTION -->
+<section class="maintenance-section" id="maintenance">
+  <div class="maintenance-bg-text">Maintenance &amp; Support</div>
+  <div class="container">
+    <div class="maintenance-inner">
+      <div class="maintenance-text fade-in">
+        <div class="maintenance-title-wrap">
+          <span class="maintenance-title-line"></span>
+          <h2 class="section-title">充実した<br>メンテナンスサポート</h2>
+          <span class="maintenance-title-line"></span>
+        </div>
+        <p>
+          HURRY POT DXは、導入後の安心をお約束するため、万全のバックアップ体制を整えています。専任のサービスエンジニアが月最低2回の定期点検を実施し、装置の状態を常に最適な条件に保ちます。
+        </p>
+        <div class="maintenance-points-row">
+          <div class="maintenance-points">
+            <div class="maintenance-point">
+              <p><strong class="point-highlight">月最低2回</strong>の定期点検訪問により、装置の稼働状態を常時把握</p>
+            </div>
+            <div class="maintenance-point">
+              <p>消耗部品の在庫確保と迅速な交換対応で、<strong class="point-highlight">ダウンタイムを最小化</strong></p>
+            </div>
+            <div class="maintenance-point">
+              <p>緊急時の<strong class="point-highlight">優先対応保証。</strong>トラブル発生時も速やかに技術者が駆けつけます</p>
+            </div>
+            <div class="maintenance-point">
+              <p>操作スタッフへの<strong class="point-highlight">定期的な使用方法・安全管理の研修をサポート</strong></p>
+            </div>
+            <div class="maintenance-point">
+              <p>点検記録の管理・報告書発行で、行政対応や施設管理の<strong class="point-highlight">記録保全を支援</strong></p>
+            </div>
+          </div>
+          <div class="maintenance-photo-box fade-in fade-in-delay-1">
+            <div class="maintenance-photo-icon">📷</div>
+            <p class="maintenance-photo-label">施設・作業写真</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="maintenance-flow fade-in fade-in-delay-1">
+        <div class="flow-title">運用フロー</div>
+        <div class="flow-steps">
+
+          <div class="flow-step">
+            <div class="flow-step-circle">
+              <svg width="46" height="46" viewBox="0 0 46 46" fill="none">
+                <!-- フタ -->
+                <path d="M13 17 L33 17" stroke="#7aab8a" stroke-width="1.8" stroke-linecap="round"></path>
+                <!-- 持ち手 -->
+                <path d="M19 17 L19 14 Q19 12 21 12 L25 12 Q27 12 27 14 L27 17" stroke="#7aab8a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+                <!-- 本体 -->
+                <path d="M15 17 L16.5 36 Q16.5 38 18.5 38 L27.5 38 Q29.5 38 29.5 36 L31 17" stroke="#7aab8a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="rgba(200,223,207,0.3)"></path>
+                <!-- 縦線 -->
+                <line x1="23" y1="21" x2="23" y2="34" stroke="#a8c8b4" stroke-width="1.3" stroke-linecap="round"></line>
+                <line x1="19" y1="21" x2="18.5" y2="34" stroke="#a8c8b4" stroke-width="1.3" stroke-linecap="round"></line>
+                <line x1="27" y1="21" x2="27.5" y2="34" stroke="#a8c8b4" stroke-width="1.3" stroke-linecap="round"></line>
+              </svg>
+              <div class="flow-step-circle-label">STEP 01</div>
+            </div>
+            <div class="flow-step-body">
+              <div class="flow-step-name">廃棄物の投入</div>
+              <div class="flow-step-desc">使用済み紙おむつを袋のまま投入。分別・前処理は不要です。</div>
+            </div>
+          </div>
+
+          <div class="flow-arrow">
+            <svg viewBox="0 0 28 16" fill="none"><path d="M0 8h24M18 2l6 6-6 6" stroke="#7aab8a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          </div>
+
+          <div class="flow-step">
+            <div class="flow-step-circle">
+              <svg width="46" height="46" viewBox="0 0 46 46" fill="none">
+                <path d="M23 38 C14 38 10 32 12 26 C13 22 16 20 16 20 C16 24 18 25 20 24 C18 20 20 14 23 10 C23 10 24 16 27 18 C29 14 28 11 28 11 C32 15 34 21 32 27 C31 30 29 32 29 32 C30 30 29 27 27 26 C28 30 26 38 23 38Z" fill="rgba(200,223,207,0.5)" stroke="#7aab8a" stroke-width="1.5" stroke-linejoin="round"></path>
+                <ellipse cx="23" cy="30" rx="4" ry="5" fill="rgba(168,200,180,0.4)"></ellipse>
+              </svg>
+              <div class="flow-step-circle-label">STEP 02</div>
+            </div>
+            <div class="flow-step-body">
+              <div class="flow-step-name">熱分解処理</div>
+              <div class="flow-step-desc">独自技術で安全に処理。臭気・煙も適切に制御されます。</div>
+            </div>
+          </div>
+
+          <div class="flow-arrow">
+            <svg viewBox="0 0 28 16" fill="none"><path d="M0 8h24M18 2l6 6-6 6" stroke="#7aab8a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          </div>
+
+          <div class="flow-step">
+            <div class="flow-step-circle">
+              <svg width="46" height="46" viewBox="0 0 46 46" fill="none">
+                <rect x="8" y="18" width="30" height="18" rx="2" stroke="#7aab8a" stroke-width="1.8" fill="rgba(200,223,207,0.3)"></rect>
+                <path d="M8 24 L38 24" stroke="#a8c8b4" stroke-width="1.2"></path>
+                <path d="M23 18 L23 36" stroke="#a8c8b4" stroke-width="1.2"></path>
+                <path d="M12 12 L8 18 L38 18 L34 12 Z" stroke="#7aab8a" stroke-width="1.6" fill="rgba(200,223,207,0.2)" stroke-linejoin="round"></path>
+                <path d="M34 12 L38 18" stroke="#7aab8a" stroke-width="1.6" stroke-linecap="round"></path>
+              </svg>
+              <div class="flow-step-circle-label">STEP 03</div>
+            </div>
+            <div class="flow-step-body">
+              <div class="flow-step-name">灰の保管</div>
+              <div class="flow-step-desc">処理後は約1/100に減容。コンテナで保管します。</div>
+            </div>
+          </div>
+
+          <div class="flow-arrow">
+            <svg viewBox="0 0 28 16" fill="none"><path d="M0 8h24M18 2l6 6-6 6" stroke="#7aab8a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          </div>
+
+          <div class="flow-step">
+            <div class="flow-step-circle">
+              <svg width="46" height="46" viewBox="0 0 46 46" fill="none">
+                <rect x="4" y="20" width="24" height="14" rx="2" stroke="#7aab8a" stroke-width="1.8" fill="rgba(200,223,207,0.3)"></rect>
+                <path d="M28 26 L28 34 L42 34 L42 26 L36 20 L28 20" stroke="#7aab8a" stroke-width="1.8" fill="rgba(200,223,207,0.2)" stroke-linejoin="round"></path>
+                <circle cx="11" cy="35" r="3.5" stroke="#7aab8a" stroke-width="1.6" fill="rgba(200,223,207,0.4)"></circle>
+                <circle cx="35" cy="35" r="3.5" stroke="#7aab8a" stroke-width="1.6" fill="rgba(200,223,207,0.4)"></circle>
+                <line x1="28" y1="26" x2="42" y2="26" stroke="#a8c8b4" stroke-width="1.2"></line>
+              </svg>
+              <div class="flow-step-circle-label">STEP 04</div>
+            </div>
+            <div class="flow-step-body">
+              <div class="flow-step-name">定期回収・処分</div>
+              <div class="flow-step-desc">灰を年1回程度まとめて回収。CO₂排出を大幅削減。</div>
+            </div>
+          </div>
+
+          <div class="flow-arrow">
+            <svg viewBox="0 0 28 16" fill="none"><path d="M0 8h24M18 2l6 6-6 6" stroke="#7aab8a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          </div>
+
+          <div class="flow-step">
+            <div class="flow-step-circle">
+              <svg width="46" height="46" viewBox="0 0 46 46" fill="none">
+                <!-- スパナの柄 -->
+                <path d="M14 38 L30 22" stroke="#7aab8a" stroke-width="4" stroke-linecap="round"></path>
+                <!-- スパナの頭（開口部） -->
+                <path d="M30 22 C30 22 28 16 32 13 C36 10 40 13 40 13 L36 17 L33 17 L33 20 L36 20 L40 16 C40 16 40 21 36 23 C32 25 30 22 30 22Z" stroke="#7aab8a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="rgba(200,223,207,0.3)"></path>
+              </svg>
+              <div class="flow-step-circle-label">SUPPORT</div>
+            </div>
+            <div class="flow-step-body">
+              <div class="flow-step-name">定期メンテナンス</div>
+              <div class="flow-step-desc">月2回以上の訪問点検で常に最良の状態を維持します。</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="wave-divider" style="background:var(--green-mist)">
+  <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,50 C480,0 960,80 1440,20 L1440,80 L0,80 Z" fill="var(--warm-white)"></path>
+  </svg>
+</div>
+<!-- VOICES SECTION -->
+<section class="voices-section" id="voices">
+  <div class="container">
+    <div class="voices-header fade-in">
+      <div class="voices-title-wrap">
+        <span class="voices-title-line"></span>
+        <h2 class="section-title">導入いただいたお客様の声</h2>
+        <span class="voices-title-line"></span>
+      </div>
+    </div>
+    <div class="voices-grid">
+
+      <div class="voice-card fade-in fade-in-delay-1">
+        <div class="voice-card-image-placeholder">
+          <span>🏥</span>
+          <p>施設写真</p>
+        </div>
+        <div class="voice-card-body">
+          <p class="voice-text">導入前は週に2〜3回の回収車が来ていましたが、今では年1回の対応で済むようになりました。スタッフの手間も減り、施設全体の衛生管理が格段に楽になったと実感しています。</p>
+          <div class="voice-divider"></div>
+          <div class="voice-author">
+            <div class="voice-avatar">🏥</div>
+            <div class="voice-info">
+              <div class="voice-role">介護老人保健施設</div>
+              <div class="voice-name">施設長 様</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="voice-card fade-in fade-in-delay-2">
+        <div class="voice-card-image-placeholder">
+          <span>🌿</span>
+          <p>施設写真</p>
+        </div>
+        <div class="voice-card-body">
+          <p class="voice-text">設置スペースが小さいのに驚きました。既存の施設に余裕があまりなかったのですが、問題なく設置できました。メンテナンスも定期的に来てくださるので、安心して任せられています。</p>
+          <div class="voice-divider"></div>
+          <div class="voice-author">
+            <div class="voice-avatar">🌿</div>
+            <div class="voice-info">
+              <div class="voice-role">特別養護老人ホーム</div>
+              <div class="voice-name">設備管理担当者 様</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="voice-card fade-in fade-in-delay-3">
+        <div class="voice-card-image-placeholder">
+          <span>📋</span>
+          <p>施設写真</p>
+        </div>
+        <div class="voice-card-body">
+          <p class="voice-text">環境への取り組みを強化したいという法人の方針と合致していました。CO₂削減の数字が見える形で示せるので、行政への報告やご家族への説明にも活用させていただいています。</p>
+          <div class="voice-divider"></div>
+          <div class="voice-author">
+            <div class="voice-avatar">📋</div>
+            <div class="voice-info">
+              <div class="voice-role">医療法人 総務部</div>
+              <div class="voice-name">担当者 様</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="voices-bg-text">User Voices</div>
+  </div>
+</section>
+<div class="wave-divider" style="background:var(--warm-white)">
+  <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,20 C480,80 960,0 1440,50 L1440,80 L0,80 Z" fill="var(--green-mist)"></path>
+  </svg>
+</div>
+<!-- CTA SECTION -->
+<section class="cta-section" id="contact">
+  <div class="container">
+    <h2 class="section-title">導入のご相談・資料請求</h2>
+    <p>HURRY POT DXについてのご質問・お見積りは、<br>お気軽にお問い合わせください。</p>
+    <a href="file:///Users/kojimamisuzu/Downloads/hurry-pot-dx%20(4).html#" class="cta-btn">お問い合わせはこちら</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-logo">株式会社 ミヤマテクノス</div>
+    <p>© 2024 Miyama Technos Co., Ltd. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  // Intersection Observer for fade-in
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.fade-in, .slide-from-left, .slide-from-right').forEach(el => observer.observe(el));
+
+  // Nav background on scroll
+  const nav = document.querySelector('nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 60) {
+      nav.style.boxShadow = '0 2px 24px rgba(0,0,0,0.06)';
+    } else {
+      nav.style.boxShadow = 'none';
+    }
+  });
+</script>
+
+
+</body></html>
